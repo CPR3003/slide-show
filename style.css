@@ -1,0 +1,88 @@
+/*initial setup*/
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #a29bfe;
+}
+
+.slideshow {
+    
+    width: 800px;
+    height: 500px;
+    border-radius: 10px; /*rounds the corners*/
+    overflow: hidden;
+}
+
+
+.slides {
+    
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input {
+    
+    display: none;
+}
+
+.slide img {
+    
+    width: 800px;
+    height: 500px;
+}
+
+/*start of css for manual nav*/
+
+.manual-nav {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    
+    border: 2px solid #e84393;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) /*affect everything except for the last child*/ {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: #fd79a8;
+}
+
+
+#radio1:checked ~ .first /*checked means selected by default */
+{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+#radio5:checked ~ .first {
+    margin-left: -80%;
+}
+
+
+
